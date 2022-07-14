@@ -36,9 +36,9 @@ const Mutation = () => {
               de novo mutations of sets of rare disease patients able to identify pathogenic mutations in human disease patients
               with high accuracy. 
             </div>
-            {/* <div className='app__mutation-image'>
-              <img src={images.pipeline} alt="pipeline" /> 
-            </div> */}
+            <div className='app__mutation-image'>
+              <img src={images.pipeline2} alt="pipeline" /> 
+            </div>
           {/* </div> */}
         </div>
       </div>
