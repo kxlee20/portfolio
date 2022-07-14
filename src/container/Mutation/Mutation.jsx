@@ -32,9 +32,8 @@ const Mutation = () => {
             <div className='app__mutation-content p-content'>
               Here we aimed to train a <b>deep convoluational neural network</b> with a large data 
               set of clinically annotated human variants from the dbSNP 
-              database. The goal was to develop a neural network to test on 
-              de novo mutations of sets of rare disease patients that 
-              identifies pathogenic mutations in human disease patients
+              database. The goal was to develop a high-performing classifer to test on 
+              de novo mutations of sets of rare disease patients able to identify pathogenic mutations in human disease patients
               with high accuracy. 
             </div>
             {/* <div className='app__mutation-image'>
