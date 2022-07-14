@@ -4,12 +4,13 @@ import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Projects.scss';
+import {Link} from 'react-router-dom'
 // import {proj_list} from '../../database';
 const Projects = () => {
   // const data = proj_list;
   const [projects, setProjects] = useState([]);
-  // const [filterWork, setFilterWork] = useState([]);
-  // const [activeFilter, setActiveFilter] = useState('All');
+  const [filterWork, setFilterWork] = useState([]);
+  const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
@@ -17,29 +18,29 @@ const Projects = () => {
 
     client.fetch(query).then((data) => {
       setProjects(data);
-  // //     setFilterWork(data);
+      setFilterWork(data);
     });
   }, []);
 
-  // const handleWorkFilter = (item) => {
-  //   setActiveFilter(item);
-  //   setAnimateCard([{ y: 100, opacity: 0 }]);
+  const handleWorkFilter = (item) => {
+    setActiveFilter(item);
+    setAnimateCard([{ y: 100, opacity: 0 }]);
 
-  //   setTimeout(() => {
-  //     setAnimateCard([{ y: 0, opacity: 1 }]);
+    setTimeout(() => {
+      setAnimateCard([{ y: 0, opacity: 1 }]);
 
-  //   if (item === 'All') {
-  //       setFilterWork(projects.filter((project) => project.tags.includes('All')))
-  //     } else {
-  //       setFilterWork(projects.filter((project) => project.tags.includes(item)));
-  //     }
-  //   }, 300);
-  // };
+    if (item === 'All') {
+        setFilterWork(projects)
+      } else {
+        setFilterWork(projects.filter((project) => project.tags.includes(item)));
+      }
+    }, 300);
+  };
   return (
     <>
     <h1 className="head-text">PROJECTS</h1>
-    {/* <div className='app__work-filter'>
-      {['Mutation ML Predictor','Neuroprosthetic App', 'Image Manipulator'].map((item, index) => (
+    <div className='app__work-filter'>
+      {['Machine Learning', 'iOS App', 'All'].map((item, index) => (
         <div
           key={index}
           onClick={() => handleWorkFilter(item)}
@@ -47,14 +48,14 @@ const Projects = () => {
           {item}
         </div>
       ))}
-    </div> */}
+    </div>
 
     <motion.div
        animate={animateCard}
        transition={{ duration: 0.5, delayChildren: 0.5 }}
        className="app__work-portfolio"
      >
-      {projects.map((project, index) => (
+      {filterWork.map((project, index) => (
         <div className="app__work-item app__flex" key={index}>
          <div
            className="app__work-img app__flex">
@@ -64,7 +65,8 @@ const Projects = () => {
               transition={{duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
               className="app__work-hover app__flex">
 
-              <a href={project.projectLink} target="_blank" rel="noreferrer">
+              {/* <a href={project.projectLink} target="_blank" rel="noreferrer"> */}
+              <Link to="/mutation">
               <motion.div
                 whileInView={{ scale: [0, 1] }}
                 whileHover={{ scale: [1, 0.90] }}
@@ -73,7 +75,8 @@ const Projects = () => {
               >
                 <AiFillEye />
               </motion.div>
-              </a>
+              {/* </a>*/}
+              </Link> 
             </motion.div> 
           </div>
 
@@ -88,4 +91,5 @@ const Projects = () => {
     </>
   );
 };
-export default AppWrap(Projects,'projects');
+// export default AppWrap(Projects,'projects');
+export default AppWrap(MotionWrap(Projects, 'app__works'),'projects');

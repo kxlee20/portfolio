@@ -3,6 +3,7 @@ import {images} from '../../constants';
 import {HiMenuAlt4, HiX} from 'react-icons/hi';
 import { motion } from 'framer-motion';
 import './NavBar.scss';
+import {Routes, Route, Link} from 'react-router-dom'
 const NavBar = () => {
     const [toggle, setToggle] = useState(false)
   return (
@@ -14,7 +15,8 @@ const NavBar = () => {
             {['home', 'projects'].map((item) => (
             <li className="app__flex p-text" key={`link-${item}`}>
             <div />
-            <a href={`#${item}`}>{item}</a>
+            <Link to={`/${item}`}>{item}</Link>
+            {/* <a href={`#${item}`}>{item}</a> */}
           </li>
         ))}
       </ul>

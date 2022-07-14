@@ -4,10 +4,14 @@ import { BsEnvelope, BsLinkedin } from 'react-icons/bs';
 const SocialMedia = () => (
   <div className="app__social">
     <div>
-      <BsEnvelope />
+      <a href="mailto:kxlee@umich.edu" target="_blank"> 
+        <BsEnvelope/>
+       </a>
     </div>
     <div>
-      <BsLinkedin />
+      <a href="https://www.linkedin.com/in/katherinexlee/" target="_blank"> 
+        <BsLinkedin/>
+      </a>
     </div>
   </div>
 );
