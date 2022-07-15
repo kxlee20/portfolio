@@ -23,6 +23,10 @@ import about04 from '../assets/about04.png';
 import profile from '../assets/profile.png';
 import circle from '../assets/circle.svg';
 import logo from '../assets/logo.png';
+import conv_illustration from '../assets/conv_illustration.gif';
+import matrix from '../assets/matrix.png';
+import conv from '../assets/conv.gif';
+import mnp_mockup from '../assets/mnp_mockup.png';
 
 import bolt from '../assets/bolt.png';
 import skype from '../assets/skype.png';
@@ -54,6 +58,10 @@ export default {
   profile,
   circle,
   logo,
+  conv_illustration,
+  conv, 
+  mnp_mockup,
+  matrix,
   bolt,
   skype,
   spotify,

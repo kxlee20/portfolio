@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { AiFillEye, AiFillGithub } from 'react-icons/ai';
+import { AiFillEye} from 'react-icons/ai';
+// AiFillGithub
 import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
@@ -66,7 +67,11 @@ const Projects = () => {
               className="app__work-hover app__flex">
 
               {/* <a href={project.projectLink} target="_blank" rel="noreferrer"> */}
-              <Link to="/mutation">
+              {/* <Link to="/mutation"> */}
+              {/* <p className="p-text">{projects.projectLink}</p> */}
+              {/* {`/${project.projectLink}`} */}
+              {/* <Link to={`/${project.tag[0]}`}> */}
+              <Link to={`/${project.projectLink}`}>
               <motion.div
                 whileInView={{ scale: [0, 1] }}
                 whileHover={{ scale: [1, 0.90] }}
