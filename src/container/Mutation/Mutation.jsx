@@ -2,7 +2,7 @@ import React from 'react'
 import {images} from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 // import {Routes, Route, Link} from 'react-router-dom'
-// import './Projects.scss';
+import './Mutation.scss';
 
 const Mutation = () => {
   return (
@@ -36,10 +36,6 @@ const Mutation = () => {
               de novo mutations of sets of rare disease patients able to identify pathogenic mutations in human disease patients
               with high accuracy. 
             </div>
-            <div className="section-heading">Pipeline</div>
-            <div className='app__mutation-image'>
-              <img src={images.pipeline2} alt="pipeline" /> 
-            </div>
             {/* <div className="section-heading">Implementation</div>
             <div className='app__mutation-gif'>
               <img src={images.conv} alt="conv" /> 
@@ -47,6 +43,13 @@ const Mutation = () => {
             
           {/* </div> */}
         </div>
+        
+          <div className='app__mutation-item'>
+            <div className="section-heading">Pipeline</div>
+            <div className='app__mutation-image'>
+              <img src={images.pipeline} alt="pipeline" /> 
+            </div>
+          </div>
       </div>
         {/* <div className='image'>
         <img src={images.pipeline} alt="pipeline" /> */}

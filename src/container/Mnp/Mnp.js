@@ -1,6 +1,7 @@
 import React from 'react'
 import {images} from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
+import './Mnp.scss';
 // import {Link} from 'react-router-dom'
 
 const Mnp = () => {
@@ -30,10 +31,6 @@ const Mnp = () => {
             the user to <b>check battery levels, give voice commands</b>, and <b>check for 
             software updates</b>. 
           </div>
-          <div className="section-heading">Mockup</div>
-          <div className='app__mnp-image'>
-            <img src={images.mnp_mockup} alt="mnp" /> 
-          </div>
           {/* <div className="section-heading">Implementation</div>
           <div className='app__mutation-gif'>
             <img src={images.conv} alt="conv" /> 
@@ -41,7 +38,14 @@ const Mnp = () => {
           
         {/* </div> */}
       </div>
+      <div className='app__mnp-item'>
+      <div className="section-heading">Mockup</div>
+          <div className='app__mnp-image'>
+            <img src={images.mnp_mockup} alt="mnp" /> 
+          </div>
+          </div>
     </div>
+    
     </div>
   )
 }

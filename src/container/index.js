@@ -6,3 +6,4 @@ export {default as Skills} from './Skills/Skills';
 export {default as Mutation} from './Mutation/Mutation';
 export {default as Home} from './Home/Home';
 export {default as Mnp} from './Mnp/Mnp';
+export {default as Typing} from './Typing/Typing';
