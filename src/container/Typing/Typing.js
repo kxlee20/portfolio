@@ -11,7 +11,7 @@ const Typing = () => {
     useEffect(() => {
         setTimeout(() => {
         navigate('/home')
-        }, 300)
+        }, 3000)
     }, [])
   return (
     <>
